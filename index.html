@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid royalblue;
+            border-radius: 20px;
+            padding: 80px;
+            background-color: #0881f325;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .display img{
+            margin-left: 105px;
+        }
+        .display button{
+            margin-left: 25px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .display button:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main class="display">
+        <h1>Happy Coding <span>&#128512;</span></h1>
+        <img id="myImage" src="pic_bulboff.gif">
+
+        <p>
+            <button type="button" onclick="light(1)">Light On</button>
+            <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+    </main>
+
+
+    <script>
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "pic_bulboff.gif"
+            } else {
+                pic = "pic_bulbon.gif"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
+</body>
+</html>
